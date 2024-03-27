@@ -17,7 +17,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 function spiderman_plugin_add_menu() {
     add_menu_page(
         'Woocommerce Data',          // Page title
-        'Syncing',                   // Menu title
+        'Spiderman',                   // Menu title
         'manage_options',            // Capability required to access the menu item
         'spiderman-plugin-settings', // Menu slug (unique identifier)
         'spiderman_plugin_page',     // Callback function to display the page content
@@ -69,7 +69,7 @@ function spiderman_submenu_page() {
             $auth_url = esc_url($response_data['authUrl']); // Escape the authUrl before using it
 
             // Output the auth URL in an iframe
-            echo '<iframe src="' . esc_url($auth_url) . '" style="width: 100%; height: 400px;"></iframe>';
+            echo '<iframe src="' . esc_url($auth_url) . '" style="width: 80%; height: 500px;"></iframe>';
         } else {
             echo '<p>' . esc_html__('Invalid API Response: Missing authUrl', 'neww') . '</p>';
         }
