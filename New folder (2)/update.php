@@ -69,7 +69,7 @@ function spiderman_submenu_page() {
             $auth_url = esc_url($response_data['authUrl']); // Escape the authUrl before using it
 
             // Output the auth URL in an iframe
-            echo '<iframe src="' . esc_url($auth_url) . '" style="width: 80%; height: 500px;"></iframe>';
+            echo '<iframe src="' . esc_url($auth_url) . '" style="width: 90%; height: 550px;"></iframe>';
         } else {
             echo '<p>' . esc_html__('Invalid API Response: Missing authUrl', 'neww') . '</p>';
         }
